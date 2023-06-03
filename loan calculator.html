@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>貸款試算</title>
+</head>
+
+<body>
+    <h2>Calculator</h2>
+    <form action="">
+        <label for="loanAmount">貸款金額</label>
+        <input type="number" name="loanAmunt" id="loanAmount" value="100000"><br>
+        <label for="interestRate">貸款利率</label>
+        <input type="number" name="interestRate" id="interestRate" value="10"><br>
+        <label for="loanTerm">貸款週期</label>
+        <input type="number" id="loanTerm"><br>
+        <select name="loanTerm" id="loanTerm">
+            <option value="3">3年</option>
+            <option value="5">5年</option>
+            <option value="7">7年</option>
+            <option value="20">20年</option>
+        </select><br>
+        <label for=""></label>
+        <input type="radio" name="replacement" id="PrintcipalRepament" checked>本金攤還
+        <input type="radio" name="replacement" id="AmortizationInterest">本金攤還
+        <br>
+        <button type="button">計算</button>
+
+
+    </form>
+    <script>
+        const LoanAmountEl = document.querySelector("#loanAmount");
+        const interestRateEl = document.querySelector("#interestRate");
+        const LoanTermEl = document.querySelector("#loanTerm");
+
+        loanAmount = LoanAmountEl.value;
+        interestRate = interestRateEl.value;
+        loanTerm = LoanTermEl.value;
+
+        console.log(loanAmount, interestRate, loanTerm);
+
+    </script>
+</body>
+
+</html>
